@@ -4,7 +4,7 @@ import './App.css';
 import { Route, NavLink, Link } from 'react-router-dom';
 import { Button,
   Container,
-  Divider,
+  Label,
   Grid,
   Header,
   Icon,
@@ -20,10 +20,10 @@ import './PrimaryHeader.css';
 class PrimaryHeader extends Component {
   state = {};
 
-  hideFixedMenu = () => this.setState({ visible: false });
-  //hideFixedMenu = () =>{ console.log('JOOOOOL!!');};
-  showFixedMenu = () => this.setState({ visible: true });
-  //showFixedMenu = () =>{ console.log('COOOOOL!!');};
+  //hideFixedMenu = () => this.setState({ visible: false });
+  hideFixedMenu = () =>{ console.log('JOOOOOL!!');};
+  //showFixedMenu = () => this.setState({ visible: true });
+  showFixedMenu = () =>{ console.log('COOOOOL!!');};
   render() {
     const { visible } = this.state;
 
@@ -40,10 +40,11 @@ class PrimaryHeader extends Component {
               <Menu inverted pointing secondary size='large'>
                 <Menu.Item as={NavLink} to='/home'>Start</Menu.Item>
                 <Menu.Item as={NavLink} to='/products'>Produkter</Menu.Item>
-                <Menu.Item as={NavLink} to='/contact'>Contact</Menu.Item>
+                <Menu.Item as={NavLink} to='/contact'>Kontakt</Menu.Item>
                 <Menu.Item position='right'>
                   <Link to='/cart'>
-                    <Button as='a' inverted ><FontAwesome name="shopping-cart" /></Button>
+                    {this.props.amount >0 && <Label color='teal' >{this.props.amount}</Label>}
+                    <Button inverted ><FontAwesome name="shopping-cart" /></Button>
                   </Link>
                 </Menu.Item>
               </Menu>

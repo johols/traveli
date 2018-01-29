@@ -7,6 +7,9 @@ import axios from 'axios';
 class PaymentPage extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      orderid: 0
+    };
   }
   componentDidMount(){
     //console.log('customerid ', this.props.customerid);
@@ -21,9 +24,14 @@ class PaymentPage extends Component {
     };
 
     axios.post('http://localhost/webshopapi/orders/create.php', payload)
-    .then(function(response){
+    .then((response) => {
       console.log('saved successfully', response);
-      // TODO: go to confirmation page
+      // TODO: reset cart array
+      this.props.clearCart();
+      // TODO: show confirmation page link
+      this.setState({orderid: response.data.order_id});
+      //<Link to={`/confirmation/${response.data.orderid}`}>
+      //this.props.history.push(`/confirmation/${response.data.orderid}`);
     });
   }
 
@@ -62,6 +70,11 @@ class PaymentPage extends Component {
           <Grid.Row centered style={{margin: '2em'}}>
             {this.props.cartitems.length >= 1 &&
               <Button onClick={this.placeOrder.bind(this)} primary size='huge'>Utför betalning<Icon name='right arrow' /></Button>
+            }
+            {this.state.orderid > 1 &&
+              <Link to={`/confirmation/${this.state.orderid}`}>
+                <Button size='huge'>Visa bekräftelse<Icon name='right arrow' /></Button>
+              </Link>
             }
           </Grid.Row>
         </Grid>

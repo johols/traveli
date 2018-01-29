@@ -33,14 +33,14 @@ class PrimaryHeader extends Component {
                 <Grid.Column width={3}>
                   <Header inverted as='h4' content='Kontakt' />
                   <List link inverted>
-                    <List.Item>Salagatan 18</List.Item>
+                    <List.Item>Skeppsgatan 18</List.Item>
                     <List.Item>789 98 Uppsala</List.Item>
-                    <List.Item>Telaefon: 018 - 88 99 77 6</List.Item>
+                    <List.Item>Telefon: 018 - 88 99 77 6</List.Item>
                   </List>
                 </Grid.Column>
                 <Grid.Column width={7}>
                   <Header as='h4' inverted>Footer Header</Header>
-                  <p>Extra space for a call to action inside the footer that could help re-engage users.</p>
+                  <p>Magna fermentum iaculis eu non diam phasellus. Pharetra convallis posuere morbi leo urna molestie at</p>
                 </Grid.Column>
               </Grid.Row>
             </Grid>

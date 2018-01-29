@@ -27,7 +27,6 @@ class ProductsPage extends Component {
   render() {
     return (
       <div className="products-container">
-        <p onClick={event => this.addToCart(event)}>trigger cart...</p>
         <ProductList addToCart={this.addToCart.bind(this)} list={this.state.products}/>
       </div>
     );

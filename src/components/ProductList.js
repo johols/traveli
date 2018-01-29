@@ -20,10 +20,6 @@ class ProductList extends Component {
     console.log('ProdList did mount', this.props);
   }
 
-  onClickDetails(details, e){
-    console.log('---------onFeatureclick', details);
-    //this.props.clickFeature(listValue);
-  }
 
   addToCart(item, e){
     //console.log('bound item:', item)
@@ -33,26 +29,25 @@ class ProductList extends Component {
   render() {
     return (
       <div className="product-list">
-      <Grid  stackable relaxed padded style={{backgroundColor:'#EDEDED', padding:'4em' }}>
+      <Grid  stackable relaxed padded style={{backgroundColor:'#EDEDED'}}>
       {this.props.list && this.props.list.map(listValue => {
-          let boundClickDetails = this.onClickDetails.bind(this, listValue.description);
           let boundAddToCart = this.addToCart.bind(this, listValue);
           return <Grid.Row key={listValue.id}>
-              <div style={{backgroundColor:'white', padding:'4em'}}>
+            <Grid.Column width={4}>
+            </Grid.Column>
+            <Grid.Column width={8}>
+              <div style={{backgroundColor:'white', padding:'2em'}}>
                 <p style={{ fontSize: '2em', fontWeight:'bold' }}>{listValue.name}</p>
-                <p onClick={boundClickDetails}>Läs mer...</p>
-                <Popup
-                 trigger={<p>Läs om detta</p>}
-                 content={listValue.description}
-                 on='click'
-                 position='top right'
-               />
-                <p>Pris: {listValue.price} {listValue.currency}</p>
+
+                <p><strong>Pris:</strong> {listValue.price} {listValue.currency}</p>
                 <div dangerouslySetInnerHTML={{__html: listValue.description}} ></div>
-                <Button onClick={boundAddToCart} size='large'  >
-                  <FontAwesome name="shopping-cart" /> Lätt i kundkorg
+                <Button onClick={boundAddToCart} size='large' style={{marginTop:'1em'}} >
+                  <FontAwesome name="shopping-cart" /> Lägg i kundkorg
                 </Button>
               </div>
+            </Grid.Column>
+            <Grid.Column width={4}>
+            </Grid.Column>
           </Grid.Row>;
         })}
 

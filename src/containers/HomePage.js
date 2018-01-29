@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
-import logo from '../images/logo.svg';
+import './HomePage.css';
 import { Route, Link } from 'react-router-dom';
 import { Button,
   Container,
@@ -21,37 +20,33 @@ class HomePage extends Component {
       <div>
 
       <Segment inverted textAlign='center' style={{ minHeight: 700, padding: '1em 0em', backgroundColor: 'steelblue' }} vertical>
-            <Container text>
-              <Header
-                as='h1'
-                content='Imagine-a-Company'
-                inverted
-                style={{ fontSize: '4em', fontWeight: 'normal', marginBottom: 0, marginTop: '3em' }}
-              />
-              <Header
-                as='h2'
-                content='Do whatever you want when you want to.'
-                inverted
-                style={{ fontSize: '1.7em', fontWeight: 'normal' }}
-              />
-              <Link to='/products'>
-                <Button inverted size='huge'>Upptäck våra produkter<Icon name='right arrow' /></Button>
-              </Link>
-            </Container>
-          </Segment>
+        <Container text>
+          <Header as='h1' content='Att resa fritt' inverted style={{ fontSize: '4em', fontWeight: 'normal', marginBottom: 0, marginTop: '3em' }}/>
+          <Header as='h2' content='Do whatever you want when you want to.' inverted style={{ fontSize: '1.7em', fontWeight: 'normal' }}/>
+          <Link to='/products'>
+            <Button inverted size='huge'>Upptäck våra produkter<Icon name='right arrow' /></Button>
+          </Link>
+        </Container>
+      </Segment>
 
         <Segment style={{ padding: '8em 0em' }} vertical>
           <Grid container stackable verticalAlign='middle'>
             <Grid.Row>
               <Grid.Column width={8}>
-                <Header as='h3' style={{ fontSize: '2em' }}>We Help Companies and Companions</Header>
+                <h3>Vi hjälper våra kunder till bättre upplevelser</h3>
                 <p style={{ fontSize: '1.33em' }}>
-                  We can give your company superpowers to do things that they never thought possible. Let us delight
-                  your customers and empower your needs... through pure data analytics.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                  labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                  nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                  velit esse cillum dolore eu fugiat nulla pariatur.
                 </p>
-                <Header as='h3' style={{ fontSize: '2em' }}>We Make Bananas That Can Dance</Header>
+                <h3>Innovation och erfarenhet</h3>
                 <p style={{ fontSize: '1.33em' }}>
-                  Yes thats right, you thought it was the stuff of dreams, but even bananas can be bioengineered.
+                  Malesuada proin libero nunc consequat interdum varius sit. Turpis egestas maecenas
+                  pharetra convallis posuere morbi leo urna. Et pharetra pharetra massa massa ultricies
+                  mi quis hendrerit. Vitae nunc sed velit dignissim sodales ut eu sem integer. Dictum sit
+                  amet justo donec enim diam vulputate. Massa enim nec dui nunc. Non sodales neque sodales
+                  ut etiam sit amet nisl purus.
                 </p>
               </Grid.Column>
               <Grid.Column floated='right' width={6}>
@@ -77,11 +72,11 @@ class HomePage extends Component {
            <Grid celled='internally' columns='equal' stackable>
              <Grid.Row textAlign='center'>
                <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
-                 <Header as='h3' style={{ fontSize: '2em' }}>"What a Company"</Header>
-                 <p style={{ fontSize: '1.33em' }}>That is what they all say about us</p>
+                 <h3>"Dessa tillval är toppen!"</h3>
+                 <p style={{ fontSize: '1.33em' }}>Booker DeWitt, besökare Columbia</p>
                </Grid.Column>
                <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
-                 <Header as='h3' style={{ fontSize: '2em' }}>Vi berättar gärna mer om våra produkter</Header>
+                 <h3>Vi berättar gärna mer om våra produkter</h3>
                  <Link to='/contact'>
                    <Button size='huge'>Kontakta oss </Button>
                 </Link>
