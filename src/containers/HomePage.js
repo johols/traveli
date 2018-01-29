@@ -1,33 +1,27 @@
 import React, { Component } from 'react';
 import './HomePage.css';
-import { Route, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { Button,
   Container,
-  Divider,
   Grid,
   Header,
   Icon,
   Image,
-  List,
-  Menu,
-  Segment,
-  Visibility } from 'semantic-ui-react';
-import FontAwesome from 'react-fontawesome';
+  Segment } from 'semantic-ui-react';
 
 class HomePage extends Component {
   render() {
     return (
       <div>
-
-      <Segment inverted textAlign='center' style={{ minHeight: 700, padding: '1em 0em', backgroundColor: 'steelblue' }} vertical>
-        <Container text>
-          <Header as='h1' content='Att resa fritt' inverted style={{ fontSize: '4em', fontWeight: 'normal', marginBottom: 0, marginTop: '3em' }}/>
-          <Header as='h2' content='Do whatever you want when you want to.' inverted style={{ fontSize: '1.7em', fontWeight: 'normal' }}/>
-          <Link to='/products'>
-            <Button inverted size='huge'>Upptäck våra produkter<Icon name='right arrow' /></Button>
-          </Link>
-        </Container>
-      </Segment>
+        <Segment inverted textAlign='center' style={{ minHeight: 700, padding: '1em 0em', backgroundColor: 'steelblue' }} vertical>
+          <Container text>
+            <Header as='h1' content='Att resa fritt' inverted style={{ fontSize: '4em', fontWeight: 'normal', marginBottom: 0, marginTop: '3em' }}/>
+            <Header as='h2' content='Do whatever you want when you want to.' inverted style={{ fontSize: '1.7em', fontWeight: 'normal' }}/>
+            <Link to='/products'>
+              <Button inverted size='huge'>Upptäck våra produkter<Icon name='right arrow' /></Button>
+            </Link>
+          </Container>
+        </Segment>
 
         <Segment style={{ padding: '8em 0em' }} vertical>
           <Grid container stackable verticalAlign='middle'>

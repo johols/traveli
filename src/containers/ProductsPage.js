@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Route, Link } from 'react-router-dom';
 import ProductList from '../components/ProductList';
 import axios from 'axios';
 

@@ -1,25 +1,9 @@
 import React, { Component } from 'react';
 import { Button,
-  Container,
-  Divider,
-  Grid,
-  Header,
-  Icon,
-  List,
-  Popup } from 'semantic-ui-react';
+  Grid } from 'semantic-ui-react';
 import FontAwesome from 'react-fontawesome';
-import { Route, Link } from 'react-router-dom';
 
 class ProductList extends Component {
-
-  constructor(props) {
-    super(props);
-  }
-
-  componentDidMount(){
-    console.log('ProdList did mount', this.props);
-  }
-
 
   addToCart(item, e){
     //console.log('bound item:', item)

@@ -1,16 +1,8 @@
 import React, { Component } from 'react';
-import { Route, Link } from 'react-router-dom';
-import CartList from '../components/CartList';
-import { Grid, Button, Icon, Header, Container} from 'semantic-ui-react';
+import { Grid, Header, Container} from 'semantic-ui-react';
 
 class ConfirmationPage extends Component {
-  constructor(props) {
-    super(props);
-  }
-  componentDidMount(){
-    console.log('confirmation orderid: ', this.props.match.params.orderid);
-  }
-
+  
   render() {
     return (
       <div className="cart-container">

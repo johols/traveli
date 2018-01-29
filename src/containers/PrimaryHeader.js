@@ -1,15 +1,9 @@
 import React, { Component } from 'react';
-import logo from '../images/logo.svg';
 import './App.css';
-import { Route, NavLink, Link } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import { Button,
   Container,
   Label,
-  Grid,
-  Header,
-  Icon,
-  Image,
-  List,
   Menu,
   Segment,
   Visibility } from 'semantic-ui-react';
@@ -21,9 +15,9 @@ class PrimaryHeader extends Component {
   state = {};
 
   //hideFixedMenu = () => this.setState({ visible: false });
-  hideFixedMenu = () =>{ console.log('JOOOOOL!!');};
+  hideFixedMenu = () =>{ console.log('hide');};
   //showFixedMenu = () => this.setState({ visible: true });
-  showFixedMenu = () =>{ console.log('COOOOOL!!');};
+  showFixedMenu = () =>{ console.log('show');};
   render() {
     const { visible } = this.state;
 

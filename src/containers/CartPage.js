@@ -1,15 +1,9 @@
 import React, { Component } from 'react';
-import { Route, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import CartList from '../components/CartList';
 import { Grid, Button, Icon} from 'semantic-ui-react';
 
 class CartPage extends Component {
-  constructor(props) {
-    super(props);
-  }
-  componentDidMount(){
-    //console.log('cartitems ', this.props.cartitems[0].name);
-  }
 
   removeFromCart(id, event){
     this.props.removeFromCart(id);

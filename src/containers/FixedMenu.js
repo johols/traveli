@@ -1,14 +1,9 @@
 import React, { Component } from 'react';
-import logo from '../images/logo.svg';
 import './App.css';
-import { Route, Link } from 'react-router-dom';
 import {
   Button,
   Container,
-  Image,
-  List,
-  Menu,
-  Visibility,
+  Menu
 } from 'semantic-ui-react'
 
 class FixedMenu extends Component {

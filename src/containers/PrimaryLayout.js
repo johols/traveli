@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route, Link, Switch, Redirect } from 'react-router-dom';
+import { Route, Switch, Redirect } from 'react-router-dom';
 import PrimaryHeader from '../containers/PrimaryHeader';
 import PrimaryFooter from '../containers/PrimaryFooter';
 import HomePage from '../containers/HomePage';
@@ -29,10 +29,6 @@ class PrimaryLayout extends Component {
     this.setState({cartitems: this.state.cartitems.filter((item) => {
       return item.id !== id;
     })});
-    //Remember - setState is asyncronous..
-    //this.setState({cartitems:[...this.state.cartitems, item]}, () => {
-      //console.log('add To Cart!', this.state.cartitems);
-    //})
   }
   clearCart(){
     console.log('Clear the cart..');

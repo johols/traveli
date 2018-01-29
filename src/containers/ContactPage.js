@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-import logo from '../images/logo.svg';
 import './App.css';
-import { Route, Link } from 'react-router-dom';
-import { Button, Grid, Container, Header, Segment, Icon } from 'semantic-ui-react';
+import { Grid, Container, Header, Segment, Icon } from 'semantic-ui-react';
 
 class ContactPage extends Component {
   render() {

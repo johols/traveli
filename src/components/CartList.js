@@ -1,20 +1,8 @@
 import React, { Component } from 'react';
-import { Button,
-  Container,
-  Divider,
-  Grid,
-  Header,
-  Icon,
-  List,
-  Popup } from 'semantic-ui-react';
+import { Button, Grid } from 'semantic-ui-react';
 import FontAwesome from 'react-fontawesome';
-import { Route, Link } from 'react-router-dom';
 
 class CartList extends Component {
-
-  constructor(props) {
-    super(props);
-  }
 
   removeFromCart(id, e){
     this.props.removeFromCart(id);

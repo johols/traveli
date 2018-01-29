@@ -1,19 +1,10 @@
 import React, { Component } from 'react';
-import logo from '../images/logo.svg';
-//import backgroundImg from '../images/abstract-triangle-mosaic.jpg';
 import './App.css';
-import { Route, NavLink } from 'react-router-dom';
-import { Button,
-  Container,
-  Divider,
+import { Container,
   Grid,
   Header,
-  Icon,
-  Image,
   List,
-  Menu,
-  Segment,
-  Visibility } from 'semantic-ui-react';
+  Segment} from 'semantic-ui-react';
 
 class PrimaryHeader extends Component {
   render() {

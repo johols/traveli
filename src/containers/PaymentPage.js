@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { Route, Link } from 'react-router-dom';
-import CartList from '../components/CartList';
+import { Link } from 'react-router-dom';
 import { Grid, Button, List, Radio, Icon} from 'semantic-ui-react';
 import axios from 'axios';
 
@@ -16,6 +15,7 @@ class PaymentPage extends Component {
   }
 
   placeOrder(){
+    // prepare order object for API call
     let cartitems = this.props.cartitems.map(item => ({ product_id: item.id,
       product_name: item.name, price: item.price, currency: item.currency }));
     let payload = {
@@ -26,12 +26,10 @@ class PaymentPage extends Component {
     axios.post('http://localhost/webshopapi/orders/create.php', payload)
     .then((response) => {
       console.log('saved successfully', response);
-      // TODO: reset cart array
+      // reset cart array
       this.props.clearCart();
-      // TODO: show confirmation page link
+      // show confirmation page link
       this.setState({orderid: response.data.order_id});
-      //<Link to={`/confirmation/${response.data.orderid}`}>
-      //this.props.history.push(`/confirmation/${response.data.orderid}`);
     });
   }
 
